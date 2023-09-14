@@ -4,3 +4,4 @@ C:\Users\ajtwj\source\repos\20230914_code_02\20230914_code_02\bin\Debug\20230914
 C:\Users\ajtwj\source\repos\20230914_code_02\20230914_code_02\obj\Debug\20230914_code_02.csproj.CoreCompileInputs.cache
 C:\Users\ajtwj\source\repos\20230914_code_02\20230914_code_02\obj\Debug\20230914_code_02.exe
 C:\Users\ajtwj\source\repos\20230914_code_02\20230914_code_02\obj\Debug\20230914_code_02.pdb
+C:\Users\ajtwj\source\repos\20230914_code_02\20230914_code_02\obj\Debug\20230914_code_02.csproj.AssemblyReference.cache

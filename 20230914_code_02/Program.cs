@@ -12,6 +12,7 @@ namespace _20230914_code_02
         {
             Random rnad = new Random();
             int[,] arr = new int[5, 5];
+            string[,] arr_string = new string[5, 5];
             int tmep;
             int tmep_big = 0;
             int binggo = 0;
@@ -38,9 +39,16 @@ namespace _20230914_code_02
                 arr[num_1, num_2] = arr[num_3, num_4];
                 arr[num_3, num_4] = tmep;
             }
-            
 
-           
+            for (int y = 0; y < 5; y++)
+            {
+                for (int x = 0; x < 5; x++)
+                {
+                    arr_string[y, x] = Convert.ToString(arr[y, x]);
+             
+                }
+            }
+
             while (true)
             {
                 if (tmep_big < binggo)
@@ -55,7 +63,7 @@ namespace _20230914_code_02
                 {
                     for (int x = 0; x < 5; x++)
                     {
-                        Console.Write(" "+arr[y, x]+" ");
+                        Console.Write(" "+ arr_string[y, x]+" ");
 
                     }
                     Console.WriteLine();
@@ -71,7 +79,7 @@ namespace _20230914_code_02
                     {
                         if (arr[y, x] == num)
                         {
-                            arr[y, x] = 0;
+                            arr_string[y,x] = "#";
                         }
 
                     }
@@ -81,54 +89,54 @@ namespace _20230914_code_02
                 binggo = 0;// 검사하기 전 초기화를 통해서 3빙고 검사에 버그를 방지
 
                 //가로 빙고 검사
-                if (arr[0, 0] == 0 && arr[0, 1] == 0 && arr[0, 2] == 0 && arr[0, 3] == 0 && arr[0, 4] == 0)
+                if (arr_string[0, 0] == "#" && arr_string[0, 1] == "#" && arr_string[0, 2] == "#" && arr_string[0, 3] == "#" && arr_string[0, 4] == "#")
                 {
                     binggo++;
                 }
-                if (arr[1, 0] == 0 && arr[1, 1] == 0 && arr[1, 2] == 0 && arr[1, 3] == 0 && arr[1, 4] == 0)
+                if (arr_string[1, 0] == "#" && arr_string[1, 1] == "#" && arr_string[1, 2] == "#" && arr_string[1, 3] == "#" && arr_string[1, 4] == "#")
                 {
                     binggo++;
                 }
-                if (arr[2, 0] == 0 && arr[2, 1] == 0 && arr[2, 2] == 0 && arr[2, 3] == 0 && arr[2, 4] == 0)
+                if (arr_string[2, 0] == "#" && arr_string[2, 1] == "#" && arr_string[2, 2] == "#" && arr_string[2, 3] == "#" && arr_string[2, 4] == "#")
                 {
                     binggo++;
                 }
-                if (arr[3, 0] == 0 && arr[3, 1] == 0 && arr[3, 2] == 0 && arr[3, 3] == 0 && arr[3, 4] == 0)
+                if (arr_string[3, 0] == "#" && arr_string[3, 1] == "#" && arr_string[3, 2] == "#" && arr_string[3, 3] == "#" && arr_string[3, 4] == "#")
                 {
                     binggo++;
                 }
-                if (arr[4, 0] == 0 && arr[4, 1] == 0 && arr[4, 2] == 0 && arr[4, 3] == 0 && arr[4, 4] == 0)
+                if (arr_string[4, 0] == "#" && arr_string[4, 1] == "#" && arr_string[4, 2] == "#" && arr_string[4, 3] == "#" && arr_string[4, 4] == "#")
                 {
                     binggo++;
                 }
                 //세로 빙고 검사
-                if (arr[0, 0] == 0 && arr[1, 0] == 0 && arr[2, 0] == 0 && arr[3, 0] == 0 && arr[4, 0] == 0)
+                if (arr_string[0, 0] == "#" && arr_string[1, 0] == "#" && arr_string[2, 0] == "#" && arr_string[3, 0] == "#" && arr_string[4, 0] == "#")
                 {
                     binggo++;
                 }
-                if (arr[0, 1] == 0 && arr[1, 1] == 0 && arr[2, 1] == 0 && arr[3, 1] == 0 && arr[4, 1] == 0)
+                if (arr_string[0, 1] == "#" && arr_string[1, 1] == "#" && arr_string[2, 1] == "#" && arr_string[3, 1] == "#" && arr_string[4, 1] == "#")
                 {
                     binggo++;
                 }
-                if (arr[0, 2] == 0 && arr[1, 2] == 0 && arr[2, 2] == 0 && arr[3, 2] == 0 && arr[4, 2] == 0)
+                if (arr_string[0, 2] == "#" && arr_string[1, 2] == "#" && arr_string[2, 2] == "#" && arr_string[3, 2] == "#" && arr_string[4, 2] == "#")
                 {
                     binggo++;
                 }
-                if (arr[0, 3] == 0 && arr[1, 3] == 0 && arr[2, 3] == 0 && arr[3, 3] == 0 && arr[4, 3] == 0)
+                if (arr_string[0, 3] == "#" && arr_string[1, 3] == "#" && arr_string[2, 3] == "#" && arr_string[3, 3] == "#" && arr_string[4, 3] == "#")
                 {
                     binggo++;
                 }
-                if (arr[0, 4] == 0 && arr[1, 4] == 0 && arr[2, 4] == 0 && arr[3, 4] == 0 && arr[4, 4] == 0)
+                if (arr_string[0, 4] == "#" && arr_string[1, 4] == "#" && arr_string[2, 4] == "#" && arr_string[3, 4] == "#" && arr_string[4, 4] == "#")
                 {
                     binggo++;
                 }
                 //대각선 검사
-                if(arr[0, 0] == 0 && arr[1, 1] == 0 && arr[2, 2] == 0 && arr[3, 3] == 0 && arr[4, 4] == 0)
+                if(arr_string[0, 0] == "#" && arr_string[1, 1] == "#" && arr_string[2, 2] == "#" && arr_string[3, 3] == "#" && arr_string[4, 4] == "#")
                 {
                     binggo++;
 
                 }
-                if (arr[0, 4] == 0 && arr[1, 3] == 0 && arr[2, 2] == 0 && arr[3, 1] == 0 && arr[0, 4] == 0)
+                if (arr_string[0, 4] == "#" && arr_string[1, 3] == "#" && arr_string[2, 2] == "#" && arr_string[3, 1] == "#" && arr_string[0, 4] == "#")
                 {
                     binggo++;
 
