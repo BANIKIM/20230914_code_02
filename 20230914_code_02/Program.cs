@@ -13,6 +13,8 @@ namespace _20230914_code_02
             Random rnad = new Random();
             int[,] arr = new int[5, 5];
             int tmep;
+            int tmep_big = 0;
+            int binggo = 0;
             int a = 1;
             int num = 0;
             for (int y = 0; y < 5; y++)
@@ -36,13 +38,19 @@ namespace _20230914_code_02
                 arr[num_1, num_2] = arr[num_3, num_4];
                 arr[num_3, num_4] = tmep;
             }
+            
 
-
-            Console.WriteLine("=========빙고=========");
+           
             while (true)
             {
+                if (tmep_big < binggo)
+                {
+                    tmep_big = binggo;
+                }
                 //화면출력
                 Console.Clear();
+                Console.WriteLine("=========빙고=========");
+                Console.WriteLine($"빙고 : {tmep_big}");
                 for (int y = 0; y < 5; y++)
                 {
                     for (int x = 0; x < 5; x++)
@@ -70,7 +78,8 @@ namespace _20230914_code_02
                     Console.WriteLine();
                 }
 
-                int binggo = 0;
+                binggo = 0;// 검사하기 전 초기화를 통해서 3빙고 검사에 버그를 방지
+
                 //가로 빙고 검사
                 if (arr[0, 0] == 0 && arr[0, 1] == 0 && arr[0, 2] == 0 && arr[0, 3] == 0 && arr[0, 4] == 0)
                 {
@@ -116,10 +125,12 @@ namespace _20230914_code_02
                 //대각선 검사
                 if(arr[0, 0] == 0 && arr[1, 1] == 0 && arr[2, 2] == 0 && arr[3, 3] == 0 && arr[4, 4] == 0)
                 {
+                    binggo++;
 
                 }
-                if(arr[0, 4] == 0 && arr[1, 3] == 0 && arr[2, 2] == 0 && arr[3, 1] == 0 && arr[0, 4] == 0)
+                if (arr[0, 4] == 0 && arr[1, 3] == 0 && arr[2, 2] == 0 && arr[3, 1] == 0 && arr[0, 4] == 0)
                 {
+                    binggo++;
 
                 }
 
@@ -129,6 +140,8 @@ namespace _20230914_code_02
                     Console.WriteLine($"{binggo}빙고!");
                     break;
                 }
+              
+             
             }
 
 
