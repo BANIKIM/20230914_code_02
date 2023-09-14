@@ -63,9 +63,10 @@ namespace _20230914_code_02
                 {
                     for (int x = 0; x < 5; x++)
                     {
-                        Console.Write(" "+ arr_string[y, x]+" ");
+                        Console.Write(arr_string[y, x]+"   ");
 
                     }
+                    Console.WriteLine();
                     Console.WriteLine();
                 }
 
